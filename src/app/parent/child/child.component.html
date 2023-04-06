@@ -1,0 +1,5 @@
+<p>child works!</p>
+<p *ngFor="let item of foodArr; let i = index">
+    {{item}} <button class="btn btn-danger" (click)="removeFood(i)">Remove</button>
+</p>
+

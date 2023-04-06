@@ -1,0 +1,30 @@
+<div class="container">
+<h1>{{userEmail}}</h1>
+   <div class="row">
+      <div class="col">
+   <input type="text" class="form-control" #foodBox>
+</div>
+<div class="col">
+   <button class="btn btn-primary" (click)="pushMyFoodName(foodBox)">Push</button>
+</div>
+</div>
+<div class="row mt-5">
+   {{myAmt | currency:'CAD'}}
+   <table>
+      <thead>
+         <th>
+            Food Name
+         </th>
+         <th>
+            Action
+         </th>
+      </thead>
+      <tbody>
+         <tr *ngFor="let item of food; index as i">
+            <td>{{item}}</td>
+            <td><button class="btn btn-danger" (click)="onRemove(i)">Remove</button></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+</div>

@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+.mybtn{background: #ff0000 !important; color: #fff !important;}
+input.ng-invalid.ng-touched{
+    border: 1px solid #ff0000;
+}
+.bg-green{background: #95f1b8;}
+.bg-lgray{background: #ccc;}

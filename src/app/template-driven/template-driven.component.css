@@ -1,0 +1,6 @@
+.templateform span{color: #ff0000;}
+input.ng-invalid.ng-touched{
+    border: 1px solid #ff0000;
+}
+.cursor{cursor: pointer; position: absolute; top: 7px; right: 8px;}
+.formAction{position: relative;}

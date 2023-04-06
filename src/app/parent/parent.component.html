@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>I am parent component</h1>
+    <input type="text" #foodInput placeholder="enter food name" class="form-control"  (keyup.enter)="addFood(foodInput.value)">
+    <br><br><br><br><br><br>
+    <h3>Child Component</h3>
+    <app-child [food]="food" (DelEvt)="removeItem($event)"></app-child>
+</div>
+
+
+<!-- 
+    parent component - child component
+    output & input         
+-->
