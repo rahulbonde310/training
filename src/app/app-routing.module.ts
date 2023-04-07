@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AngularDevelopmentComponent } from './angular-development/angular-development.component';
 import { ArrayComponent } from './array/array.component';
@@ -16,6 +16,9 @@ import { SignupComponent } from './signup/signup.component';
 import { SignupdataComponent } from './signupdata/signupdata.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { MainComponent } from './main/main.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp1Module } from './comp1/comp1.module';
+
 
 
 
@@ -29,6 +32,8 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'array', component:ArrayComponent},
   {path:'parent', component:ParentComponent},
+  
+  
   {path:'services', children:[
     {path:'', component:ServicesComponent},
     {path:'angular', component:AngularDevelopmentComponent}
@@ -40,11 +45,11 @@ const routes: Routes = [
   {path:'products', component:ProductsComponent},
  { path: 'about', component:AboutComponent },
  {path:'main', component:MainComponent},
-  {path:'**', component:PageNotFoundComponent},
+ {path:'comp1', loadChildren:()=>import('./comp1/comp1.module').then(m=>m.Comp1Module)},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

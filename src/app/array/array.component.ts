@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./array.component.css']
 })
 export class ArrayComponent {
-
+constructor(){
+  console.log("Array Component");
+  
+}
   food = [
     {
       name:"Sandeep",

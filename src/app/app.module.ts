@@ -24,8 +24,9 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { SignupdataComponent } from './signupdata/signupdata.component';
 import { MainComponent } from './main/main.component';
-import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
+
+
 
 
 
@@ -53,8 +54,7 @@ import { Comp2Component } from './comp2/comp2.component';
     ProductsComponent,
     SignupdataComponent,
     MainComponent,
-    Comp1Component,
-    Comp2Component
+    Comp2Component,
   ],
   imports: [
     BrowserModule,
@@ -62,8 +62,14 @@ import { Comp2Component } from './comp2/comp2.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log("App Module");
+    
+  }
+}

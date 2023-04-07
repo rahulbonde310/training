@@ -1,6 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
+
+
+const headers = new HttpHeaders()
+.set('content-type','application/json')
+.set('Access-Control-Allow-Origin','*')
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +25,7 @@ url:any;
 
   fetchProduct(){
     this.url = this.api;
-    return this.http.get<any>(this.url+'products')
+    return this.http.get<any>(this.url+'products', {headers:headers})
   }
 
   userName = new Subject<any>();

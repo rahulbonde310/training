@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit{
   constructor(){
-
+    //console.log("About Component");
   }
 
   title = "I'm a title";
