@@ -25,6 +25,9 @@ import { ProductsComponent } from './products/products.component';
 import { SignupdataComponent } from './signupdata/signupdata.component';
 import { MainComponent } from './main/main.component';
 import { Comp2Component } from './comp2/comp2.component';
+import { CategoryComponent } from './category/category.component';
+import { AddcategoryComponent } from './category/addcategory/addcategory.component';
+import { CategoryModule } from './category/category.module';
 
 
 
@@ -55,13 +58,16 @@ import { Comp2Component } from './comp2/comp2.component';
     SignupdataComponent,
     MainComponent,
     Comp2Component,
+    CategoryComponent,
+    AddcategoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CategoryModule
 
   ],
   providers: [],

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AngularDevelopmentComponent } from './angular-development/angular-development.component';
@@ -18,6 +18,8 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { MainComponent } from './main/main.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp1Module } from './comp1/comp1.module';
+import { CategoryComponent } from './category/category.component';
+import { AddcategoryComponent } from './category/addcategory/addcategory.component';
 
 
 
@@ -45,7 +47,15 @@ const routes: Routes = [
   {path:'products', component:ProductsComponent},
  { path: 'about', component:AboutComponent },
  {path:'main', component:MainComponent},
- {path:'comp1', loadChildren:()=>import('./comp1/comp1.module').then(m=>m.Comp1Module)},
+
+
+ {path:'category', component:CategoryComponent,
+  children:[
+    {path:'', component:AddcategoryComponent}
+  ]},
+ 
+
+  {path:'comp1', loadChildren:()=>import('./comp1/comp1.module').then(m=>m.Comp1Module)},
 ];
 
 @NgModule({

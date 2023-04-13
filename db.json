@@ -47,6 +47,23 @@
       "id": 4
     }
   ],
+  "category": [
+    {
+      "category": "Fashion",
+      "description": "Fashion Cloths, Kurta, Shoes",
+      "id": 1
+    },
+    {
+      "category": "Electronics",
+      "description": "Electronis - Mobile, Radio, Television",
+      "id": 2
+    },
+    {
+      "category": "Mobile Phones",
+      "description": "Mobile phones Summer Saving Days",
+      "id": 3
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

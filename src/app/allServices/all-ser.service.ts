@@ -23,6 +23,11 @@ url:any;
     return this.http.get<any>(this.url+'userProfile')
   }
 
+  getCatEdit(categoryId:any){
+    this.url = this.apiPath;
+    return this.http.get<any>(this.url+'category/'+categoryId)
+  }
+
   fetchProduct(){
     this.url = this.api;
     return this.http.get<any>(this.url+'products', {headers:headers})
