@@ -1,0 +1,9 @@
+1. create main componant with routing and module file
+2. create main child component
+3. create reactive form in child component
+4. add function in child component
+5. fetch data in main component
+6. click on edit button
+	6.1 create services and get data in API
+	6.2 add perems code
+	6.3 import ActivetedRoutes in Constrctor
