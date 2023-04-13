@@ -7,3 +7,4 @@
 	6.1 create services and get data in API
 	6.2 add perems code
 	6.3 import ActivetedRoutes in Constrctor
+	6.4 after edit => click on submit button use put code
