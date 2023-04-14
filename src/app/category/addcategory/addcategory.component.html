@@ -1,4 +1,6 @@
 <div class="container">
+<h3 *ngIf="editMode == false">Add Category</h3>
+<h3 *ngIf="editMode == true">Edit category</h3>
     <form [formGroup]="categoryForm" (ngSubmit)="AddCategory()">
         <div class="form-group">
           <label for="category">Category Name</label>
@@ -10,6 +12,7 @@
           <input type="text" class="form-control" placeholder="Category Description" formControlName="description">
         </div>
         
-        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        <button type="submit" class="btn btn-primary mt-4" >Submit</button>
+        
       </form>
 </div>

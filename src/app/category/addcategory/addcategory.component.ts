@@ -13,7 +13,7 @@ export class AddcategoryComponent implements OnInit {
   constructor(private router:Router, private http:HttpClient, private allSer:AllSerService, private route:ActivatedRoute){}
   categoryForm!:FormGroup;
 id:any;
-
+editMode:boolean = false;
 ngOnInit(){
   this.categoryForm = new FormGroup({
     category: new FormControl(''),
@@ -29,9 +29,16 @@ ngOnInit(){
 }
 
   AddCategory(){
-    this.http.post('http://localhost:3000/category', this.categoryForm.value).subscribe(res=>{
-      this.router.navigateByUrl('category')
-    })
+    if(this.editMode = false){
+      this.http.post<any>('http://localhost:3000/category', this.categoryForm.value).subscribe(res=>{
+        this.router.navigateByUrl('category')
+      })
+      
+    }else{
+      this.allSer.updateCategory(this.route.snapshot.params['id'], this.categoryForm.value).subscribe(res=>{
+        this.router.navigate(['category'])
+      })
+    }
   } 
 
 

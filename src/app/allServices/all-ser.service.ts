@@ -27,7 +27,10 @@ url:any;
     this.url = this.apiPath;
     return this.http.get<any>(this.url+'category/'+categoryId)
   }
-
+updateCategory(categoryId:any, data:any){
+  this.url = this.apiPath;
+  return this.http.put(this.url+'category/'+ categoryId, data)
+}
   fetchProduct(){
     this.url = this.api;
     return this.http.get<any>(this.url+'products', {headers:headers})
